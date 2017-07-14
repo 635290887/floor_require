@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- inject:css -->
+	<!-- endinject -->
+</head>
+<body>
+	<div class="floor">
+		<ul>
+			<li>01</li>
+			<li>02</li>
+			<li>03</li>
+			<li>04</li>
+			<li>05</li>
+			<li>06</li>	
+		</ul>
+	</div>
+	<div class="floor_ctrl">
+		<ul>
+			<li>01</li>
+			<li>02</li>
+			<li>03</li>
+			<li>04</li>
+			<li>05</li>
+			<li>06</li>	
+		</ul>
+	</div>
+	<!-- inject:js -->
+	<!-- endinject -->
+	<script type="text/javascript">
+		require.config({
+			paths:{
+				jquery:"js/jquery.min",
+				baiduT:"js/baiduTemplate",
+				extend:"js/extend"	
+			}
+		});
+
+		require(["jquery","baiduT","extend"],function($,bd){
+			$(".floor_ctrl").floor(".floor");
+		});
+	</script>
+</body>
+
+</html>
